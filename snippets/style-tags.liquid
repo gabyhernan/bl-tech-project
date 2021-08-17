@@ -1,7 +1,5 @@
- {{ 'collection-slider.css' | asset_url | stylesheet_tag }}
-
 {%comment %} splidejs library css {% endcomment %}
 {%- if layout == 'theme' -%}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-
+ {{ 'collection-slider.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
