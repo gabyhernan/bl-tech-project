@@ -1,0 +1,35 @@
+
+  <div class="slider__wrapper"> 
+  <div class="splide">
+	<div class="splide__track">
+		<div class="splide__list">
+		
+    {% for collection in collections %}
+        {% capture collection_title %}
+            {{ collection.title | escape }}
+        {% endcapture %}
+            <div class="splide__slide">
+                <div class="splide__slide__container">
+                <a href="{{ collection.url }}" title="{{ collection_title}}">
+            {% if collection.image != blank or collection.products.first != blank %}
+            {%- assign image_object = collection.image | default: collection.products.first.featured_image -%}
+
+                 <img src="{{ image_object | img_url: 'large' }}" alt="{{ image.alt | escape }}">
+                <h3 class="splide__slide__title"> {{collection_title}} </h3> 
+                <p> {{ collection.all_products_count }} </p> 
+             {% else %}
+             {% comment %} fallback when there is no image {% endcomment %}
+            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+        
+                {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+                </a>
+                </div>
+            </div>
+    {% endfor %}
+        
+		</div>
+	</div>   
+ </div>
+ </div> 
+ 

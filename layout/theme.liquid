@@ -8,12 +8,10 @@
   <link rel="canonical" href="{{ canonical_url }}">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   {{ content_for_header }} <!-- Header hook for plugins -->
-  {{ 'application.css' | asset_url | stylesheet_tag }}
-  {{ 'application.js' | asset_url | script_tag }}
-   {% include 'style-tags', layout: 'theme' %}
+     {% include 'style-tags', layout: 'theme' %}
   {% include 'script-tags', layout: 'theme' %}
 </head> 
-<body>
+<body>  
 <h1> Gaby's Dev Theme </h1>
   {% for link in linklists.main-menu.links %}
     {% assign child_list_handle = link.title | handleize %}

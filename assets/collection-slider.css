@@ -1,0 +1,11 @@
+.slider__wrapper {
+    padding: 0 4rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.splide__slide__title, p {
+    font-family: 'Futura','Helvetica', sans-serif;
+}
+
+   
