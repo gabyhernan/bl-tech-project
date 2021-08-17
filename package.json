@@ -1,0 +1,21 @@
+{
+  "name": "bl-tech-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:dev": "theme deploy --env=development",
+    "watch:dev": "theme watch --env=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabyhernan/bl-tech-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabyhernan/bl-tech-project/issues"
+  },
+  "homepage": "https://github.com/gabyhernan/bl-tech-project#readme"
+}
